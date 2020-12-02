@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        font-weight: bold;
+        color: purple;
+        text-decoration: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sodoku Solution Validator</h1>
+    <p>A 4kyu Kata from <a href="www.codewars.com">Codewars</a></p>
+
+    <h3>The Game:</h3>
+    <p>Sudoku is a game played on a 9x9 grid.</p>
+    <p>
+      The goal of the game is to fill all cells of the grid with digits from 1
+      to 9, so that each column, each row, and each of the nine 3x3 sub-grids
+      (also known as blocks) contain all of the digits from 1 to 9.
+    </p>
+
+    <h3>Instructions</h3>
+    <p>
+      Write a function
+      <code>validSolution/ValidateSolution/valid_solution() </code> that accepts
+      a 2D array representing a Sudoku board, and returns true if it is a valid
+      solution, or false otherwise.
+    </p>
+    <p>
+      The cells of the sudoku board may also contain 0's, which will represent
+      empty cells. Boards containing one or more zeroes are considered to be
+      invalid solutions.
+    </p>
+    <p>
+      The board is always 9 cells by 9 cells, and every cell only contains
+      integers from 0 to 9.
+    </p>
+    <h3>Solution:</h3>
+    <h3>Methodology:</h3>
+    <h5>Variables:</h5>
+    <ul>
+      <li>Board: 9 arrays, the sudoku board</li>
+      <li>helperArray: items are added here if they do not already exist</li>
+    </ul>
+    <h5>Steps:</h5>
+    <p>There are three Sets of loops in this algorithm, they are as follows</p>
+    <ol>
+      <li>
+        This set of 2 loops walks through the horizontal values in each array,
+        checking them against helper array
+      </li>
+      <li>
+        Another set of identical for loops, but this one checks "vertically" by
+        switching the [i] and[j] values around
+      </li>
+      <li>
+        The final is a set of three loops. It validates the 3x3 squares of a
+        sodoku board. The first (i) is for iterating through all 9 squares, the
+        second (J) is for iterating through each "row" of a 3x3 square, and the
+        3rd(K) is for checking the columns of the 3x3 square
+      </li>
+    </ol>
+    <script src="sodokuValidator.js"></script>
+  </body>
+</html>
